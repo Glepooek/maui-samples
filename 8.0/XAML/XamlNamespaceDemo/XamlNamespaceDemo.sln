@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31611.283
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamlNamespaceDemo", "XamlNamespaceDemo\XamlNamespaceDemo.csproj", "{7E3C7481-2732-4F9E-AA03-8A1F6E6FF3CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlNamespaceDemo.Controls", "XamlNamespaceDemo.Controls\XamlNamespaceDemo.Controls.csproj", "{DCFE69C6-BB26-43F0-85D1-0C0695276E68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E3C7481-2732-4F9E-AA03-8A1F6E6FF3CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E3C7481-2732-4F9E-AA03-8A1F6E6FF3CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E3C7481-2732-4F9E-AA03-8A1F6E6FF3CE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7E3C7481-2732-4F9E-AA03-8A1F6E6FF3CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E3C7481-2732-4F9E-AA03-8A1F6E6FF3CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E3C7481-2732-4F9E-AA03-8A1F6E6FF3CE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DCFE69C6-BB26-43F0-85D1-0C0695276E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCFE69C6-BB26-43F0-85D1-0C0695276E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCFE69C6-BB26-43F0-85D1-0C0695276E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCFE69C6-BB26-43F0-85D1-0C0695276E68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+	EndGlobalSection
+EndGlobal
