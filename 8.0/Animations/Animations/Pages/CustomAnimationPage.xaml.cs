@@ -11,14 +11,10 @@ public partial class CustomAnimationPage : ContentPage
 
 	private async void OnClickedAsync(object sender, EventArgs e)
 	{
-		
 		Color bgColor = this.BackgroundColor;
         await Task.WhenAll(
           this.ColorTo(bgColor, GetRandomColour(), c => this.BackgroundColor = c)
 		);
-
-		
-        
     }
 
     private static readonly Random rand = new Random();

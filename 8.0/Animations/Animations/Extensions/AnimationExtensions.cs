@@ -19,7 +19,7 @@ public static class ViewExtensions
 
     static Task<bool> ColorAnimation(VisualElement element, string name, Func<double, Color> transform, Action<Color> callback, uint length, Easing easing)
     {
-        easing = easing ?? Easing.Linear;
+        easing ??= Easing.Linear;
         var taskCompletionSource = new TaskCompletionSource<bool>();
 
         element.Animate<Color>(name, transform, callback, 16, length, easing, (v, c) => taskCompletionSource.SetResult(c));
