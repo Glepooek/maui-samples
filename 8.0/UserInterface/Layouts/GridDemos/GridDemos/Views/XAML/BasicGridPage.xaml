@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GridDemos.Views.XAML.BasicGridPage"
              Title="Basic Grid demo">
-   <Grid>
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*" />
             <RowDefinition />
@@ -17,14 +17,12 @@
         <Label Text="Row 0, Column 0"
                HorizontalOptions="Center"
                VerticalOptions="Center" />
-        <BoxView Grid.Column="1"
-                 Color="Blue" />
+        <BoxView Grid.Column="1" Color="Blue" />
         <Label Grid.Column="1"
                Text="Row 0, Column 1"
                HorizontalOptions="Center"
                VerticalOptions="Center" />
-        <BoxView Grid.Row="1"
-                 Color="Teal" />
+        <BoxView Grid.Row="1" Color="Teal" />
         <Label Grid.Row="1"
                Text="Row 1, Column 0"
                HorizontalOptions="Center"

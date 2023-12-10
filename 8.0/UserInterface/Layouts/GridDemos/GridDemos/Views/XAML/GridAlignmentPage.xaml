@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GridDemos.Views.XAML.GridAlignmentPage"
@@ -19,20 +19,17 @@
         <Label Text="Upper left"
                HorizontalOptions="Start"
                VerticalOptions="Start" />
-        <BoxView Grid.Column="1"
-                 Color="LightSkyBlue" />
+        <BoxView Grid.Column="1" Color="LightSkyBlue" />
         <Label Grid.Column="1"
                Text="Upper center"
                HorizontalOptions="Center"
-               VerticalOptions="Start"/>
-        <BoxView Grid.Column="2"
-                 Color="CadetBlue" />
+               VerticalOptions="Start" />
+        <BoxView Grid.Column="2" Color="CadetBlue" />
         <Label Grid.Column="2"
                Text="Upper right"
                HorizontalOptions="End"
                VerticalOptions="Start" />
-        <BoxView Grid.Row="1"
-                 Color="CornflowerBlue" />
+        <BoxView Grid.Row="1" Color="CornflowerBlue" />
         <Label Grid.Row="1"
                Text="Center left"
                HorizontalOptions="Start"
@@ -53,8 +50,7 @@
                Text="Center right"
                HorizontalOptions="End"
                VerticalOptions="Center" />
-        <BoxView Grid.Row="2"
-                 Color="SteelBlue" />
+        <BoxView Grid.Row="2" Color="SteelBlue" />
         <Label Grid.Row="2"
                Text="Lower left"
                HorizontalOptions="Start"

@@ -52,7 +52,7 @@
                 <TextCell Text="Calculator layout demo"
                           Detail="Non-functioning"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type codeViews:CalculatorPage}" /> 
+                          CommandParameter="{x:Type codeViews:CalculatorPage}" />
             </TableSection>
         </TableRoot>
     </TableView>
