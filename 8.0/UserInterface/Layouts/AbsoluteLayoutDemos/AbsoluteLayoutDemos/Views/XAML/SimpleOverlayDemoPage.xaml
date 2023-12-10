@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AbsoluteLayoutDemos.Views.XAML.SimpleOverlayDemoPage"
@@ -8,11 +8,10 @@
                      AbsoluteLayout.LayoutBounds="0,0,1,1"
                      AbsoluteLayout.LayoutFlags="All">
             <Label Text="This might be a page of UI objects except that the only functional UI object on the page is a Button." />
-            <Button Text="Simulate 5-second work item"
-                    Clicked="OnButtonClicked" />
+            <Button Text="Simulate 5-second work item" Clicked="OnButtonClicked" />
         </StackLayout>
 
-        <!-- Overlay -->
+        <!--  Overlay  -->
         <ContentView x:Name="overlay"
                      AbsoluteLayout.LayoutBounds="0,0,1,1"
                      AbsoluteLayout.LayoutFlags="All"
@@ -21,7 +20,7 @@
             <ProgressBar x:Name="progressBar"
                          Margin="20"
                          VerticalOptions="Center" />
-                         
+
         </ContentView>
     </AbsoluteLayout>
 </ContentPage>
