@@ -4,8 +4,6 @@ public partial class AppTabbedPage
 {
 	public AppTabbedPage()
 	{
-		InitializeComponent();
-
-		
+		InitializeComponent();		
 	}
 }

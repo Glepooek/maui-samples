@@ -15,7 +15,7 @@ namespace ControlGallery.Views.XAML
         void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
         {
             // Show the detail page.
-            IsPresented = false;
+            //IsPresented = false;
         }
     }
 }
