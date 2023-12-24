@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RadioButtonDemos.GroupedRadioButtonsPage"
@@ -20,23 +20,19 @@
         <RadioButton Content="Other"
                      GroupName="colors"
                      CheckedChanged="OnColorsRadioButtonCheckedChanged" />
-        <Label x:Name="colorLabel"
-               Text="You have chosen:" />
+        <Label x:Name="colorLabel" Text="You have chosen:" />
         <Label Text="What's your favorite fruit?" />
         <StackLayout RadioButtonGroup.GroupName="fruits">
-            <!-- All of the RadioButtons in this StackLayout will automatically be given the
-                 GroupName 'fruits' -->
-            <RadioButton Content="Apple"
-                         CheckedChanged="OnFruitsRadioButtonCheckedChanged" />
-            <RadioButton Content="Banana"
-                         CheckedChanged="OnFruitsRadioButtonCheckedChanged" />
-            <RadioButton Content="Pineapple"
-                         CheckedChanged="OnFruitsRadioButtonCheckedChanged" />
-            <RadioButton Content="Other"
-                         CheckedChanged="OnFruitsRadioButtonCheckedChanged" />
+            <!--
+                All of the RadioButtons in this StackLayout will automatically be given the
+                GroupName 'fruits'
+            -->
+            <RadioButton Content="Apple" CheckedChanged="OnFruitsRadioButtonCheckedChanged" />
+            <RadioButton Content="Banana" CheckedChanged="OnFruitsRadioButtonCheckedChanged" />
+            <RadioButton Content="Pineapple" CheckedChanged="OnFruitsRadioButtonCheckedChanged" />
+            <RadioButton Content="Other" CheckedChanged="OnFruitsRadioButtonCheckedChanged" />
         </StackLayout>
-        <Label x:Name="fruitLabel"
-               Text="You have chosen:" />
+        <Label x:Name="fruitLabel" Text="You have chosen:" />
     </StackLayout>
 </ContentPage>
 

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RadioButtonDemos.RadioButtonsExplainedPage"
@@ -10,13 +10,12 @@
         <Label Text="When RadioButton.Content is a View, it will be displayed only on supported platforms:" />
         <OnPlatform x:TypeArguments="View">
             <On Platform="iOS,UWP">
-                <!-- iOS and UWP can assign a View to RadioButton.Content. -->
+                <!--  iOS and UWP can assign a View to RadioButton.Content.  -->
                 <RadioButton>
                     <RadioButton.Content>
                         <StackLayout Orientation="Horizontal">
                             <Image Source="monkey.png" />
-                            <Label Text="Monkey"
-                                    VerticalTextAlignment="Center" />
+                            <Label Text="Monkey" VerticalTextAlignment="Center" />
                         </StackLayout>
                     </RadioButton.Content>
                 </RadioButton>
@@ -30,6 +29,8 @@
         <RadioButton>
             <RadioButton.Content>
                 <Image Source="elephant.png"
+                       WidthRequest="20"
+                       HeightRequest="20"
                        HorizontalOptions="Start" />
             </RadioButton.Content>
         </RadioButton>
@@ -37,7 +38,10 @@
         <Label Text="When a ControlTemplate is applied, a View can be assigned to RadioButton.Content on every platform:" />
         <RadioButton ControlTemplate="{x:Static RadioButton.DefaultTemplate}">
             <RadioButton.Content>
-                <Image Source="cat.png" />
+                <Image Source="cat.png"
+                       WidthRequest="20"
+                       HeightRequest="20"
+                       HorizontalOptions="Start" />
             </RadioButton.Content>
         </RadioButton>
     </StackLayout>

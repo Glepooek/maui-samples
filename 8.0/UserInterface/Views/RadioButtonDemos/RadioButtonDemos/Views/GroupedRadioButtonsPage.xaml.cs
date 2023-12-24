@@ -15,6 +15,10 @@
 
         void OnFruitsRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
         {
+            if (fruitLabel == null)
+            {
+                return;
+            }
             RadioButton button = sender as RadioButton;
             fruitLabel.Text = $"You have chosen: {button.Content}";
         }
