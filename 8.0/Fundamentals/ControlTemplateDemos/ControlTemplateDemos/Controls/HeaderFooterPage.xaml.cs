@@ -5,7 +5,8 @@
         ControlTemplate secondaryColorTemplate;
         ControlTemplate tertiaryColorTemplate;
 
-        public static readonly BindableProperty HeaderTextProperty = BindableProperty.Create(nameof(HeaderText), typeof(string), typeof(HeaderFooterPage), default(string));
+        public static readonly BindableProperty HeaderTextProperty 
+            = BindableProperty.Create(nameof(HeaderText), typeof(string), typeof(HeaderFooterPage), default(string));
 
         public string HeaderText
         {
@@ -26,7 +27,7 @@
             tertiaryColorTemplate = (ControlTemplate)Resources["TertiaryColorTemplate"];
         }
 
-        void OnChangeThemeLabelTapped(object sender, EventArgs e)
+        private void OnChangeThemeLabelTapped(object sender, TappedEventArgs e)
         {
             originalTemplate = !originalTemplate;
             ControlTemplate = (originalTemplate) ? secondaryColorTemplate : tertiaryColorTemplate;

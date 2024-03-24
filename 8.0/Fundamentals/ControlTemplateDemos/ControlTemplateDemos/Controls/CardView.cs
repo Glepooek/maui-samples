@@ -2,12 +2,18 @@
 {
     public class CardView : ContentView
     {
-        public static readonly BindableProperty CardTitleProperty = BindableProperty.Create(nameof(CardTitle), typeof(string), typeof(CardView), string.Empty);
-        public static readonly BindableProperty CardDescriptionProperty = BindableProperty.Create(nameof(CardDescription), typeof(string), typeof(CardView), string.Empty);
-        public static readonly BindableProperty BorderColorProperty = BindableProperty.Create(nameof(BorderColor), typeof(Color), typeof(CardView), Colors.DarkGray);
-        public static readonly BindableProperty CardColorProperty = BindableProperty.Create(nameof(CardColor), typeof(Color), typeof(CardView), Colors.White);
-        public static readonly BindableProperty IconImageSourceProperty = BindableProperty.Create(nameof(IconImageSource), typeof(ImageSource), typeof(CardView), default(ImageSource));
-        public static readonly BindableProperty IconBackgroundColorProperty = BindableProperty.Create(nameof(IconBackgroundColor), typeof(Color), typeof(CardView), Colors.LightGray);
+        public static readonly BindableProperty CardTitleProperty
+            = BindableProperty.Create(nameof(CardTitle), typeof(string), typeof(CardView), string.Empty);
+        public static readonly BindableProperty CardDescriptionProperty
+            = BindableProperty.Create(nameof(CardDescription), typeof(string), typeof(CardView), string.Empty);
+        public static readonly BindableProperty BorderColorProperty
+            = BindableProperty.Create(nameof(BorderColor), typeof(Color), typeof(CardView), Colors.DarkGray);
+        public static readonly BindableProperty CardColorProperty
+            = BindableProperty.Create(nameof(CardColor), typeof(Color), typeof(CardView), Colors.White);
+        public static readonly BindableProperty IconImageSourceProperty
+            = BindableProperty.Create(nameof(IconImageSource), typeof(ImageSource), typeof(CardView), default(ImageSource));
+        public static readonly BindableProperty IconBackgroundColorProperty
+            = BindableProperty.Create(nameof(IconBackgroundColor), typeof(Color), typeof(CardView), Colors.LightGray);
 
         public string CardTitle
         {
