@@ -11,7 +11,7 @@
 
         <DatePicker Format="D"
                     VerticalOptions="CenterAndExpand"
-                    Margin="10, 0" />
+                    Margin="10,0" />
 
     </StackLayout>
 </ContentPage>
