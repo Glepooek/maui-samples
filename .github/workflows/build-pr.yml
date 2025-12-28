@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, macos-13]
+        os: [windows-latest, macos-15]
 
     runs-on: ${{ matrix.os }}
 
@@ -20,23 +20,26 @@ jobs:
       with:
         fetch-depth: 2
 
-    # Remove when .NET 8 is default on hosted runners
-    - name: Install .NET 8
-      uses: actions/setup-dotnet@v3.2.0
+    - name: Install .NET SDKs
+      uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0
+        dotnet-version: |
+          9.0.x
+          10.0.x
+        include-prerelease: true
+        dotnet-quality: 'preview'
 
     - name: Install .NET MAUI Workload
       run: dotnet workload install maui
-      # if: runner.os == 'macOS' # reenable when .NET 8 is default on hosted runners
 
     - name: Select Xcode Version
-      run: sudo xcode-select -s /Applications/Xcode_15.2.app
-      if: runner.os == 'macOS' # Remove when Xcode 15+ is default on the hosted runners
+      run: sudo xcode-select -s /Applications/Xcode_26.1.1.app
+      if: runner.os == 'macOS'
 
     - name: Find and build changed projects
       run: |
         $failedProjectCount=0
+        $skippedProjectCount=0
         # Get the list of changed files
         $changedFiles = git diff --name-only -r --diff-filter=d HEAD^1 HEAD
 
@@ -63,8 +66,8 @@ jobs:
             if ($file -like '*.csproj') {
               $projectToBuild = $file
             } else {
-              $currentFolder = (Get-Item -LiteralPath (Resolve-Path -Path "$file")).Directory
-              
+              $currentFolder = (Get-Item -LiteralPath (Resolve-Path -Path "$file") -Force).Directory
+
               while ($currentFolder -ne $null -and '' -ne $currentFolder) {
                 $csprojFiles = Get-ChildItem -Path $currentFolder -Filter '*.csproj' -File
 
@@ -113,7 +116,12 @@ jobs:
 
                   $proj_dir = [System.IO.Path]::GetDirectoryName($projectToBuild)
                   Write-Output "Cleaning up bin & obj in $proj_dir"
-                  Get-ChildItem -Path $proj_dir -Directory -Recurse -Include bin,obj | Remove-Item -Recurse -Force
+
+                  try {
+                    Get-ChildItem -Path $proj_dir -Directory -Recurse -Include bin,obj | Remove-Item -Recurse -Force
+                  } catch {
+                    Write-Output "::warning:: Failed to clean up bin & obj in $proj_dir"  
+                  }
 
                   Write-Output "::endgroup::"
                 }
@@ -128,7 +136,7 @@ jobs:
             Write-Output "" | Out-File -FilePath $jobSummaryFile -Append
             Write-Output "# Failed builds: $failedProjectCount" | Out-File -FilePath $jobSummaryFile -Append
             Write-Output "# Skipped builds: $skippedProjectCount" | Out-File -FilePath $jobSummaryFile -Append
-            
+
             exit $failedProjectCount
         }
       shell: powershell
